@@ -1,0 +1,15 @@
+//
+//  HomeViewController.swift
+//  MoviePL
+//
+//  Created by Ildar Garifullin on 10/12/2022.
+//
+
+import UIKit
+
+class HomeViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
