@@ -43,6 +43,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E199522294632C5000F436D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E199523294632D6000F436D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E199524294632E6000F436D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		6E69A09E29437AB70093649F = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +83,9 @@
 		6E69A0A929437AB70093649F /* MoviePL */ = {
 			isa = PBXGroup;
 			children = (
+				6E199522294632C5000F436D /* Models */,
+				6E199523294632D6000F436D /* Views */,
+				6E199524294632E6000F436D /* ViewModels */,
 				6E69A0BE2944F4740093649F /* Controllers */,
 				6E69A0AA29437AB70093649F /* AppDelegate.swift */,
 				6E69A0AC29437AB70093649F /* SceneDelegate.swift */,
