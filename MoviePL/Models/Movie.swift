@@ -9,19 +9,15 @@ import Foundation
 
 // MARK: - TrendingMoviesResponse
 struct TrendingMoviesResponse: Codable {
-    let results: [Result]
-
-    enum CodingKeys: String, CodingKey {
-        case results
-    }
+    let results: [Movie]
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Movie: Codable {
     let id: Int
-    let mediaType: MediaType
+    let mediaType: String?
     let originalTitle: String?
-    let overview, posterPath: String
+    let overview, posterPath: String?
     let releaseDate: String?
     let voteAverage: Double
     let voteCount: Int
@@ -36,9 +32,4 @@ struct Result: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-}
-
-enum MediaType: String, Codable {
-    case movie = "movie"
-    case tv = "tv"
 }
