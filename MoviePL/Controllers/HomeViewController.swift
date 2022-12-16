@@ -80,13 +80,25 @@ class HomeViewController: UIViewController {
 //            }
 //        }
         
-        APICaller.shared.getTrendingTvs { results in
-            switch results {
-            case .success(let tv):
-                print(tv)
-            case .failure(let error):
-                print(error)
-            }
+//        APICaller.shared.getTrendingTvs { results in
+//            switch results {
+//            case .success(let tv):
+//                print(tv)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+//        APICaller.shared.getUpcomingMovies { result in
+//
+//        }
+        
+//        APICaller.shared.getPopular { result in
+//
+//        }
+        
+        APICaller.shared.getTopRated { result in
+            
         }
     }
 }
