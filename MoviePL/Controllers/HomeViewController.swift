@@ -9,8 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let sectionTitles: [String] = ["Trending Movies", "Popular",
-                                   "Trending TV", "Upcoming Movies",
+    let sectionTitles: [String] = ["Trending Movies", "Trending TV",
+                                   "Popular", "Upcoming Movies",
                                    "Top rated"]
     
     private let homeFeedTable: UITableView = {
@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
             height: 430))
         homeFeedTable.tableHeaderView = headerView
         
-        getTrendingMovies()
+        fetchData()
     }
     
     private func configureNavbar() {
@@ -70,11 +70,20 @@ class HomeViewController: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func getTrendingMovies() {
-        APICaller.shared.getTrendingMovies { results in
+    private func fetchData() {
+//        APICaller.shared.getTrendingMovies { results in
+//            switch results {
+//            case .success(let movies):
+//                print(movies)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+        
+        APICaller.shared.getTrendingTvs { results in
             switch results {
-            case .success(let movies):
-                print(movies)
+            case .success(let tv):
+                print(tv)
             case .failure(let error):
                 print(error)
             }
@@ -113,7 +122,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

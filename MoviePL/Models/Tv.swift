@@ -1,19 +1,19 @@
 //
-//  Movie.swift
+//  Tv.swift
 //  MoviePL
 //
-//  Created by Ildar Garifullin on 15/12/2022.
+//  Created by Ildar Garifullin on 16/12/2022.
 //
 
 import Foundation
 
-// MARK: - TrendingMoviesResponse
-struct TrendingMoviesResponse: Codable {
-    let results: [Movie]
+// MARK: - TrendingTvResponse
+struct TrendingTvResponse: Codable {
+    let results: [Tv]
 }
 
-// MARK: - Movie
-struct Movie: Codable {
+// MARK: - Tv
+struct Tv: Codable {
     let id: Int
     let mediaType: String?
     let originalTitle: String?
