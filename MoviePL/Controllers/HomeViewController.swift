@@ -7,6 +7,14 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TrendingMovies = 0
+    case TrendingTv = 1
+    case Popular = 2
+    case Upcoming = 3
+    case TopRated = 4
+}
+
 class HomeViewController: UIViewController {
     
     let sectionTitles: [String] = ["Trending Movies", "Trending TV",
@@ -36,9 +44,7 @@ class HomeViewController: UIViewController {
             width: view.bounds.width,
             height: 430))
         homeFeedTable.tableHeaderView = headerView
-        
-        fetchData()
-    }
+}
     
     private func configureNavbar() {
         var image = UIImage(named: "moviepl")
@@ -68,38 +74,6 @@ class HomeViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
-    }
-    
-    private func fetchData() {
-//        APICaller.shared.getTrendingMovies { results in
-//            switch results {
-//            case .success(let movies):
-//                print(movies)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        APICaller.shared.getTrendingTvs { results in
-//            switch results {
-//            case .success(let tv):
-//                print(tv)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        APICaller.shared.getUpcomingMovies { result in
-//
-//        }
-        
-//        APICaller.shared.getPopular { result in
-//
-//        }
-        
-        APICaller.shared.getTopRated { result in
-            
-        }
     }
 }
 
