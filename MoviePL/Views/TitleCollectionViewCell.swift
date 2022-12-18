@@ -28,5 +28,6 @@ class TitleCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        posterImageView.frame = contentView.bounds
     }
 }
