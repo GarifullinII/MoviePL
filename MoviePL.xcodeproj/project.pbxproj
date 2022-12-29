@@ -130,6 +130,7 @@
 		6E69A0BE2944F4740093649F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E904118295E06D400AF0C92 /* Core */,
 				6E69A0BF2944F4920093649F /* HomeViewController.swift */,
 				6E69A0C12944F56D0093649F /* UpcomingViewController.swift */,
 				6E69A0C32944F5950093649F /* SearchViewController.swift */,
@@ -153,6 +154,13 @@
 				6EC88AF0294B89AE0047B8AD /* APICaller.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		6E904118295E06D400AF0C92 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
