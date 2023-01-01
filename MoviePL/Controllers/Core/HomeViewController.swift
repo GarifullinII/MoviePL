@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
             height: 430))
         homeFeedTable.tableHeaderView = headerView
         
-        APICaller.shared.getMovie(with: "Leon")
+        navigationController?.pushViewController(TitlePreviewViewController(), animated: true)
 }
     
     private func configureNavbar() {
